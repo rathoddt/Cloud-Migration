@@ -1,7 +1,4 @@
-# AWS Migration
-
-
-## Database Migration Service
+# Database Migration Service
 
 - Catalog Your Databases
     -- Generate a list of databases. 
