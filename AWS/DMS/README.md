@@ -9,7 +9,7 @@
 
 
 
-1. Proof of Concept Migration
+1) Proof of Concept Migration
     - Keep the tools simple.
     - Keep the size small.
     - Have a fallback plan.
