@@ -12,7 +12,7 @@ Begin with a list of databases.
 Identify application owners.
 Do a "proof of concept" migration.
 
-1) Proof of Concept Migration
+1) <b>Proof of Concept Migration</b>
     - Keep the tools simple.
         - `pg_dump` and `pg_restore`
         - Can enable compression 
@@ -21,6 +21,9 @@ Do a "proof of concept" migration.
     - Simple migration to prove it can work
     - Keep the size small. Not a lot of time or effort
     - Have a fallback plan.
+        - Whom to notify
+        - What applications are affected?
+        - How to restore the data?
 
 
 
@@ -32,22 +35,37 @@ AWS Schema Conversion Tool (AWS SCT)
     - Replication instances run DMS tasks.
     - Increase instance class for more resources.
     - Deploy as Multi-AZ for higher availability.
-    - Check the security group.
+    - Ensure security groups allow connections.
 
 3) Configuring Endpoints
+    - Endpoints come in two flavors (target and source)
     - Data is read from the source.
     - Data is written to the target.
     - Not all database types are supported.
 
 4) Migration Tasks
     - Three modes
-    - Large Binary Object (LOB support
+        - Migrate existing data.
+        - Migrate existing data and replicate ongoing changes.
+            - Change Data Capture (CDC)
+        - Replicate data changes only.
+    - Large Binary Object (LOB) support
     - Table mappings
+        - Use rules to specify which data source to utilize.
+        - Use filters to specify data.
+        - Use transformations to modify
 
 5) Testing the Migration
     - Involve application owner
     - Pre-migration test
-    - Time Travel logs
+        - Data type assessment
+        - Pre-migration assessment run
+    - Monitoring
+        - Task status
+        - CloudWatch and CloudTrail
+        - Database logs
+        - Time Travel logs
+
 
 
 - Catalog Your Databases  
