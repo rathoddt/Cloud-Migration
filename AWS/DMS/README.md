@@ -10,9 +10,9 @@
 
 
 1. Proof of Concept Migration
-- Keep the tools simple.
-- Keep the size small.
-- Have a fallback plan.
+    - Keep the tools simple.
+    - Keep the size small.
+    - Have a fallback plan.
 
 - Catalog Your Databases  
     Generate a list of databases.   
